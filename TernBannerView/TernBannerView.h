@@ -27,7 +27,11 @@ typedef NS_ENUM(NSInteger, TernBannerDataType) {
 
 @property (nonatomic, readwrite) TernBannerDataType type;
 
+@property (nonatomic, readwrite) NSInteger bannerHeight;
+
 @property (nonatomic, readwrite) NSInteger currentIndex;
+
+
 @property (nonatomic, readwrite) BOOL showPageController;
 
 - (instancetype)initWithFrame:(CGRect)frame type:(TernBannerDataType)type NS_DESIGNATED_INITIALIZER;

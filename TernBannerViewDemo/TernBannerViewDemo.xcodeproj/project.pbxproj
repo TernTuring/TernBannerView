@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC2562122182DAD300615817 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2562112182DAD300615817 /* AppDelegate.m */; };
+		FC2562152182DAD300615817 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2562142182DAD300615817 /* ViewController.m */; };
+		FC2562182182DAD300615817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2562162182DAD300615817 /* Main.storyboard */; };
+		FC25621A2182DADF00615817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2562192182DADF00615817 /* Assets.xcassets */; };
+		FC25621D2182DADF00615817 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC25621B2182DADF00615817 /* LaunchScreen.storyboard */; };
+		FC2562202182DADF00615817 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC25621F2182DADF00615817 /* main.m */; };
+		FC25622A2182DADF00615817 /* TernBannerViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2562292182DADF00615817 /* TernBannerViewDemoTests.m */; };
+		FC2562352182DADF00615817 /* TernBannerViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2562342182DADF00615817 /* TernBannerViewDemoUITests.m */; };
+		FC2562492182DAF800615817 /* BannerItemViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2562432182DAF800615817 /* BannerItemViewCell.m */; };
+		FC25624A2182DAF800615817 /* TernBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2562442182DAF800615817 /* TernBannerView.m */; };
+		FC25624B2182DAF800615817 /* PageControlerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2562452182DAF800615817 /* PageControlerView.m */; };
+		FC25624E2182E08100615817 /* temp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC25624C2182E08100615817 /* temp@2x.png */; };
+		FC25624F2182E08100615817 /* temp@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC25624D2182E08100615817 /* temp@3x.png */; };
+		FC2562522182E23A00615817 /* banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC2562502182E23A00615817 /* banner@2x.png */; };
+		FC2562532182E23A00615817 /* banner@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC2562512182E23A00615817 /* banner@3x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC2562262182DADF00615817 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC2562052182DAD300615817 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC25620C2182DAD300615817;
+			remoteInfo = TernBannerViewDemo;
+		};
+		FC2562312182DADF00615817 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC2562052182DAD300615817 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC25620C2182DAD300615817;
+			remoteInfo = TernBannerViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC25620D2182DAD300615817 /* TernBannerViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TernBannerViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2562102182DAD300615817 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FC2562112182DAD300615817 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FC2562132182DAD300615817 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FC2562142182DAD300615817 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FC2562172182DAD300615817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC2562192182DADF00615817 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC25621C2182DADF00615817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC25621E2182DADF00615817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC25621F2182DADF00615817 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC2562252182DADF00615817 /* TernBannerViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TernBannerViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2562292182DADF00615817 /* TernBannerViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TernBannerViewDemoTests.m; sourceTree = "<group>"; };
+		FC25622B2182DADF00615817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC2562302182DADF00615817 /* TernBannerViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TernBannerViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2562342182DADF00615817 /* TernBannerViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TernBannerViewDemoUITests.m; sourceTree = "<group>"; };
+		FC2562362182DADF00615817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC2562432182DAF800615817 /* BannerItemViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerItemViewCell.m; sourceTree = "<group>"; };
+		FC2562442182DAF800615817 /* TernBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TernBannerView.m; sourceTree = "<group>"; };
+		FC2562452182DAF800615817 /* PageControlerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageControlerView.m; sourceTree = "<group>"; };
+		FC2562462182DAF800615817 /* BannerItemViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerItemViewCell.h; sourceTree = "<group>"; };
+		FC2562472182DAF800615817 /* TernBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TernBannerView.h; sourceTree = "<group>"; };
+		FC2562482182DAF800615817 /* PageControlerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageControlerView.h; sourceTree = "<group>"; };
+		FC25624C2182E08100615817 /* temp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "temp@2x.png"; sourceTree = "<group>"; };
+		FC25624D2182E08100615817 /* temp@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "temp@3x.png"; sourceTree = "<group>"; };
+		FC2562502182E23A00615817 /* banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner@2x.png"; sourceTree = "<group>"; };
+		FC2562512182E23A00615817 /* banner@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner@3x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC25620A2182DAD300615817 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2562222182DADF00615817 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC25622D2182DADF00615817 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC2562042182DAD300615817 = {
+			isa = PBXGroup;
+			children = (
+				FC2562422182DAF800615817 /* TernBannerView */,
+				FC25620F2182DAD300615817 /* TernBannerViewDemo */,
+				FC2562282182DADF00615817 /* TernBannerViewDemoTests */,
+				FC2562332182DADF00615817 /* TernBannerViewDemoUITests */,
+				FC25620E2182DAD300615817 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC25620E2182DAD300615817 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC25620D2182DAD300615817 /* TernBannerViewDemo.app */,
+				FC2562252182DADF00615817 /* TernBannerViewDemoTests.xctest */,
+				FC2562302182DADF00615817 /* TernBannerViewDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC25620F2182DAD300615817 /* TernBannerViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FC25624C2182E08100615817 /* temp@2x.png */,
+				FC25624D2182E08100615817 /* temp@3x.png */,
+				FC2562502182E23A00615817 /* banner@2x.png */,
+				FC2562512182E23A00615817 /* banner@3x.png */,
+				FC2562102182DAD300615817 /* AppDelegate.h */,
+				FC2562112182DAD300615817 /* AppDelegate.m */,
+				FC2562132182DAD300615817 /* ViewController.h */,
+				FC2562142182DAD300615817 /* ViewController.m */,
+				FC2562162182DAD300615817 /* Main.storyboard */,
+				FC2562192182DADF00615817 /* Assets.xcassets */,
+				FC25621B2182DADF00615817 /* LaunchScreen.storyboard */,
+				FC25621E2182DADF00615817 /* Info.plist */,
+				FC25621F2182DADF00615817 /* main.m */,
+			);
+			path = TernBannerViewDemo;
+			sourceTree = "<group>";
+		};
+		FC2562282182DADF00615817 /* TernBannerViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC2562292182DADF00615817 /* TernBannerViewDemoTests.m */,
+				FC25622B2182DADF00615817 /* Info.plist */,
+			);
+			path = TernBannerViewDemoTests;
+			sourceTree = "<group>";
+		};
+		FC2562332182DADF00615817 /* TernBannerViewDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC2562342182DADF00615817 /* TernBannerViewDemoUITests.m */,
+				FC2562362182DADF00615817 /* Info.plist */,
+			);
+			path = TernBannerViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		FC2562422182DAF800615817 /* TernBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				FC2562472182DAF800615817 /* TernBannerView.h */,
+				FC2562442182DAF800615817 /* TernBannerView.m */,
+				FC2562462182DAF800615817 /* BannerItemViewCell.h */,
+				FC2562432182DAF800615817 /* BannerItemViewCell.m */,
+				FC2562482182DAF800615817 /* PageControlerView.h */,
+				FC2562452182DAF800615817 /* PageControlerView.m */,
+			);
+			name = TernBannerView;
+			path = ../TernBannerView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC25620C2182DAD300615817 /* TernBannerViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC2562392182DADF00615817 /* Build configuration list for PBXNativeTarget "TernBannerViewDemo" */;
+			buildPhases = (
+				FC2562092182DAD300615817 /* Sources */,
+				FC25620A2182DAD300615817 /* Frameworks */,
+				FC25620B2182DAD300615817 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TernBannerViewDemo;
+			productName = TernBannerViewDemo;
+			productReference = FC25620D2182DAD300615817 /* TernBannerViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC2562242182DADF00615817 /* TernBannerViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC25623C2182DADF00615817 /* Build configuration list for PBXNativeTarget "TernBannerViewDemoTests" */;
+			buildPhases = (
+				FC2562212182DADF00615817 /* Sources */,
+				FC2562222182DADF00615817 /* Frameworks */,
+				FC2562232182DADF00615817 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC2562272182DADF00615817 /* PBXTargetDependency */,
+			);
+			name = TernBannerViewDemoTests;
+			productName = TernBannerViewDemoTests;
+			productReference = FC2562252182DADF00615817 /* TernBannerViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC25622F2182DADF00615817 /* TernBannerViewDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC25623F2182DADF00615817 /* Build configuration list for PBXNativeTarget "TernBannerViewDemoUITests" */;
+			buildPhases = (
+				FC25622C2182DADF00615817 /* Sources */,
+				FC25622D2182DADF00615817 /* Frameworks */,
+				FC25622E2182DADF00615817 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC2562322182DADF00615817 /* PBXTargetDependency */,
+			);
+			name = TernBannerViewDemoUITests;
+			productName = TernBannerViewDemoUITests;
+			productReference = FC2562302182DADF00615817 /* TernBannerViewDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC2562052182DAD300615817 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = waterelle;
+				TargetAttributes = {
+					FC25620C2182DAD300615817 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					FC2562242182DADF00615817 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = FC25620C2182DAD300615817;
+					};
+					FC25622F2182DADF00615817 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = FC25620C2182DAD300615817;
+					};
+				};
+			};
+			buildConfigurationList = FC2562082182DAD300615817 /* Build configuration list for PBXProject "TernBannerViewDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC2562042182DAD300615817;
+			productRefGroup = FC25620E2182DAD300615817 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC25620C2182DAD300615817 /* TernBannerViewDemo */,
+				FC2562242182DADF00615817 /* TernBannerViewDemoTests */,
+				FC25622F2182DADF00615817 /* TernBannerViewDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC25620B2182DAD300615817 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC25621D2182DADF00615817 /* LaunchScreen.storyboard in Resources */,
+				FC25624F2182E08100615817 /* temp@3x.png in Resources */,
+				FC2562522182E23A00615817 /* banner@2x.png in Resources */,
+				FC2562532182E23A00615817 /* banner@3x.png in Resources */,
+				FC25621A2182DADF00615817 /* Assets.xcassets in Resources */,
+				FC25624E2182E08100615817 /* temp@2x.png in Resources */,
+				FC2562182182DAD300615817 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2562232182DADF00615817 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC25622E2182DADF00615817 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC2562092182DAD300615817 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2562152182DAD300615817 /* ViewController.m in Sources */,
+				FC25624A2182DAF800615817 /* TernBannerView.m in Sources */,
+				FC25624B2182DAF800615817 /* PageControlerView.m in Sources */,
+				FC2562202182DADF00615817 /* main.m in Sources */,
+				FC2562122182DAD300615817 /* AppDelegate.m in Sources */,
+				FC2562492182DAF800615817 /* BannerItemViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2562212182DADF00615817 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC25622A2182DADF00615817 /* TernBannerViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC25622C2182DADF00615817 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2562352182DADF00615817 /* TernBannerViewDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC2562272182DADF00615817 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC25620C2182DAD300615817 /* TernBannerViewDemo */;
+			targetProxy = FC2562262182DADF00615817 /* PBXContainerItemProxy */;
+		};
+		FC2562322182DADF00615817 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC25620C2182DAD300615817 /* TernBannerViewDemo */;
+			targetProxy = FC2562312182DADF00615817 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC2562162182DAD300615817 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC2562172182DAD300615817 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC25621B2182DADF00615817 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC25621C2182DADF00615817 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC2562372182DADF00615817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FC2562382182DADF00615817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC25623A2182DADF00615817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 356XMYTC6D;
+				INFOPLIST_FILE = TernBannerViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.waterelle.TernBannerViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC25623B2182DADF00615817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 356XMYTC6D;
+				INFOPLIST_FILE = TernBannerViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.waterelle.TernBannerViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FC25623D2182DADF00615817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 356XMYTC6D;
+				INFOPLIST_FILE = TernBannerViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.waterelle.TernBannerViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TernBannerViewDemo.app/TernBannerViewDemo";
+			};
+			name = Debug;
+		};
+		FC25623E2182DADF00615817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 356XMYTC6D;
+				INFOPLIST_FILE = TernBannerViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.waterelle.TernBannerViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TernBannerViewDemo.app/TernBannerViewDemo";
+			};
+			name = Release;
+		};
+		FC2562402182DADF00615817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 356XMYTC6D;
+				INFOPLIST_FILE = TernBannerViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.waterelle.TernBannerViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TernBannerViewDemo;
+			};
+			name = Debug;
+		};
+		FC2562412182DADF00615817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 356XMYTC6D;
+				INFOPLIST_FILE = TernBannerViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.waterelle.TernBannerViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TernBannerViewDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC2562082182DAD300615817 /* Build configuration list for PBXProject "TernBannerViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC2562372182DADF00615817 /* Debug */,
+				FC2562382182DADF00615817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC2562392182DADF00615817 /* Build configuration list for PBXNativeTarget "TernBannerViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC25623A2182DADF00615817 /* Debug */,
+				FC25623B2182DADF00615817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC25623C2182DADF00615817 /* Build configuration list for PBXNativeTarget "TernBannerViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC25623D2182DADF00615817 /* Debug */,
+				FC25623E2182DADF00615817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC25623F2182DADF00615817 /* Build configuration list for PBXNativeTarget "TernBannerViewDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC2562402182DADF00615817 /* Debug */,
+				FC2562412182DADF00615817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC2562052182DAD300615817 /* Project object */;
+}

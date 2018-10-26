@@ -12,7 +12,8 @@
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 
-static const NSInteger kLoopMax = 100;
+static const NSInteger kTernLoopMax = 100;
+static const NSInteger kTernCellHeight = 100;
 
 @interface TernBannerView ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
@@ -52,6 +53,8 @@ static const NSInteger kLoopMax = 100;
     return self;
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
 - (instancetype)init:(TernBannerDataType)type {
     self = [super init];
     if (self) {
@@ -64,6 +67,7 @@ static const NSInteger kLoopMax = 100;
     
     return self;
 }
+#pragma clang diagnostic pop
 
 - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder type:(TernBannerDataType)type{
     
@@ -160,7 +164,7 @@ static const NSInteger kLoopMax = 100;
     if (row < [self.bannersIndex count]) {
         NSNumber *index = [self.bannersIndex objectAtIndex:row];
         if (nil != index) {
-            NSInteger indexValue = [index integerValue]%kLoopMax;
+            NSInteger indexValue = [index integerValue]%kTernLoopMax;
             if (indexValue < [self.bannersItem count]) {
                 UIImageView *img = [self.bannersItem objectAtIndex:indexValue];
                 [cell initCellValue:img.image];
@@ -173,7 +177,7 @@ static const NSInteger kLoopMax = 100;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(SCREEN_WIDTH, 160);
+    return CGSizeMake(SCREEN_WIDTH, 0 != _bannerHeight ? _bannerHeight : kTernCellHeight);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
@@ -233,7 +237,7 @@ static const NSInteger kLoopMax = 100;
         _pageControllerView.currentPage = page;
     }
     
-    [_bannersView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:kLoopMax/2*[self getBannerNums]+page inSection:0]  atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:false];
+    [_bannersView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:kTernLoopMax/2*[self getBannerNums]+page inSection:0]  atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:false];
 }
 
 #pragma mark - Set Action
@@ -269,7 +273,7 @@ static const NSInteger kLoopMax = 100;
     
     [_bannersIndex removeAllObjects];
     NSInteger nums = [self getBannerNums];
-    for (NSInteger i = 0; i < kLoopMax; i++) {
+    for (NSInteger i = 0; i < kTernLoopMax; i++) {
         for (NSInteger j = 0; j < nums; j++) {
             [_bannersIndex addObject:@(j)];
         }
@@ -290,10 +294,7 @@ static const NSInteger kLoopMax = 100;
     [_bannersView reloadData];
     
     if (nums > 0) {
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [_bannersView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:(kLoopMax/2*nums+_currentIndex) inSection:0]  atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:false];
-        });
+        [_bannersView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:(kTernLoopMax/2*nums+_currentIndex) inSection:0]  atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:false];
     }
 }
 
