@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 	s.name			= 'TernBannerView'
-	s.version		= '0.0.1'
+	s.version		= '0.0.2'
 	s.summary		= 'A clean and simple banner for iPhone and iPad'
 	s.homepage		= 'https://github.com/TernTuring/TernBannerView'
 	s.author		= { 'TernTuring' => 'ternturing@aol.com' }
