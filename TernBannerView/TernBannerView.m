@@ -23,8 +23,7 @@ static const NSInteger kTernCellHeight = 100;
 @property (nonatomic, strong) NSMutableArray *bannersItem;
 
 @property (nonatomic, strong) PageControlerView *pageControllerView;
-
-@property (nonatomic, assign) BOOL needUpdate;
+@property (nonatomic, strong) NSTimer *bannersTimer;
 
 @end
 
@@ -45,7 +44,6 @@ static const NSInteger kTernCellHeight = 100;
         
         _currentIndex = 0;
         _type = type;
-        _needUpdate = NO;
         _bannersIndex = [[NSMutableArray alloc]initWithCapacity:100];
         _bannersItem = [[NSMutableArray alloc]initWithCapacity:100];
     }
@@ -85,15 +83,16 @@ static const NSInteger kTernCellHeight = 100;
 }
 
 - (void)layoutSubviews {
-    if (nil == _bannersView) {
+    static dispatch_once_t once = 0;
+    dispatch_once(&once, ^{
         [self initBannerView];
-        if (_showPageController) {
+        if (self.showPageController) {
             [self initPageControlerView];
         }
         
-        [self setNeedsLayout];
+        //[self setNeedsLayout];
         [self reloadData];
-    }
+    });
 }
 
 #pragma mark - InitView
@@ -166,8 +165,10 @@ static const NSInteger kTernCellHeight = 100;
         if (nil != index) {
             NSInteger indexValue = [index integerValue]%kTernLoopMax;
             if (indexValue < [self.bannersItem count]) {
-                UIImageView *img = [self.bannersItem objectAtIndex:indexValue];
-                [cell initCellValue:img.image];
+                UIImage *img = [self.bannersItem objectAtIndex:indexValue];
+                if ([img isKindOfClass:[UIImage class]]) {
+                    [cell initCellValue:img];
+                }
             }
         }
     }
@@ -217,15 +218,15 @@ static const NSInteger kTernCellHeight = 100;
 
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    //[self stopBannersTimer];
+    [self stopTimer];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-//    if ([self.banners count] > 1) {
-//        if (nil == self.bannersTimer) {
-//            [self startBannersTimer];
-//        }
-//    }
+    if ([self.bannersIndex count] > 1) {
+        if (nil == self.bannersTimer) {
+            [self startTimer];
+        }
+    }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
@@ -248,27 +249,16 @@ static const NSInteger kTernCellHeight = 100;
     }
 }
 
-
-#pragma mark - Get Cell Action
-
-- (UIView *)getCellView:(NSInteger)row {
-    if ([self.dataSource respondsToSelector:@selector(bannerView:cellForItemAtIndex:)]) {
-        return [self.dataSource bannerView:self cellForItemAtIndex:row];
+- (void)setAutoLoop:(BOOL)autoLoop {
+    _autoLoop = autoLoop;
+    if (autoLoop) {
+        [self startTimer];
     } else {
-        return nil;
+        [self stopTimer];
     }
 }
 
-- (NSInteger) getBannerNums {
-    NSInteger nums = 0;
-    
-    if ([self.dataSource respondsToSelector:@selector(numberItemsOfBanner:)]) {
-        nums = [self.dataSource numberItemsOfBanner:self];
-    }
-    return nums;
-}
-
-#pragma mark - Action
+#pragma mark - Public Action
 - (void)reloadData {
     
     [_bannersIndex removeAllObjects];
@@ -293,9 +283,71 @@ static const NSInteger kTernCellHeight = 100;
     _bannersView.dataSource = self;
     [_bannersView reloadData];
     
-    if (nums > 0) {
-        [_bannersView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:(kTernLoopMax/2*nums+_currentIndex) inSection:0]  atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:false];
+    NSInteger page = _bannersView.contentOffset.x/SCREEN_WIDTH;
+    page = page%[self getBannerNums];
+    
+    if (nil != _pageControllerView && page !=  _pageControllerView.currentPage && page < [self getBannerNums]) {
+        _pageControllerView.currentPage = page;
     }
+    
+    if (nums > 0) {
+        [_bannersView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:(kTernLoopMax/2*nums+page) inSection:0]  atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:false];
+    }
+}
+
+- (void)invalidAutoLoop {
+    [self stopTimer];
+}
+
+#pragma mark - Private Action
+- (void)startTimer {
+    self.bannersTimer = [NSTimer scheduledTimerWithTimeInterval:2.0f
+                                                         target:self
+                                                       selector:@selector(autoScroll:)
+                                                       userInfo:nil
+                                                        repeats:YES];
+}
+
+- (void)stopTimer {
+    if (self.bannersTimer != nil )
+    {
+        [self.bannersTimer invalidate];
+        self.bannersTimer = nil;
+    }
+}
+
+- (void)autoScroll:(NSTimer*)tm
+{
+    NSInteger page = _bannersView.contentOffset.x/SCREEN_WIDTH;
+    page = page%[self getBannerNums];
+    
+    if (nil != _pageControllerView && page !=  _pageControllerView.currentPage && page < [self getBannerNums]) {
+        _pageControllerView.currentPage = page;
+    }
+    
+    [_bannersView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:kTernLoopMax/2*[self getBannerNums]+page inSection:0]  atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+    
+    [_bannersView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:kTernLoopMax/2*[self getBannerNums]+page+1 inSection:0]  atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+}
+
+
+#pragma mark - Get Cell Action
+
+- (UIImage *)getCellView:(NSInteger)row {
+    if ([self.dataSource respondsToSelector:@selector(bannerView:cellForItemAtIndex:)]) {
+        return [self.dataSource bannerView:self cellForItemAtIndex:row];
+    } else {
+        return nil;
+    }
+}
+
+- (NSInteger) getBannerNums {
+    NSInteger nums = 0;
+    
+    if ([self.dataSource respondsToSelector:@selector(numberItemsOfBanner:)]) {
+        nums = [self.dataSource numberItemsOfBanner:self];
+    }
+    return nums;
 }
 
 @end

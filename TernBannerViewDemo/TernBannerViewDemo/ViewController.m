@@ -24,6 +24,7 @@
     banner.dataSource = self;
     banner.showPageController = YES;
     banner.bannerHeight = 160;
+    banner.autoLoop = YES;
     [banner setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:banner];
     
@@ -41,10 +42,8 @@
     return 4;
 }
 
-- (UIView *)bannerView:(TernBannerView *)bannerView cellForItemAtIndex:(NSInteger)index {
-    UIImageView *img = [[UIImageView alloc] init];
-    img.image = [UIImage imageNamed:(0 == index%2)?@"banner.png":@"temp.png"];
-    return img;
+- (UIImage *)bannerView:(TernBannerView *)bannerView cellForItemAtIndex:(NSInteger)index {
+    return [UIImage imageNamed:(0 == index%2)?@"banner.png":@"temp.png"];
 }
 
 

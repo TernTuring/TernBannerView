@@ -31,6 +31,8 @@ typedef NS_ENUM(NSInteger, TernBannerDataType) {
 
 @property (nonatomic, readwrite) NSInteger currentIndex;
 
+@property (nonatomic, readwrite) BOOL autoLoop;
+
 
 @property (nonatomic, readwrite) BOOL showPageController;
 
@@ -43,6 +45,8 @@ typedef NS_ENUM(NSInteger, TernBannerDataType) {
 
 - (void)reloadData;
 
+- (void)invalidAutoLoop;
+
 @end
 
 @protocol TernBannerViewDataSource<NSObject>
@@ -51,7 +55,7 @@ typedef NS_ENUM(NSInteger, TernBannerDataType) {
 
 - (NSInteger)numberItemsOfBanner:(TernBannerView *)bannerView;
 
-- (UIView *)bannerView:(TernBannerView *)bannerView cellForItemAtIndex:(NSInteger)index;
+- (UIImage *)bannerView:(TernBannerView *)bannerView cellForItemAtIndex:(NSInteger)index;
 
 @end
 

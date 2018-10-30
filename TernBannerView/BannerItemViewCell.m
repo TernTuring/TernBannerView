@@ -40,7 +40,6 @@
 {
     if (nil != display) {
         _display.image = display;
-        [self layoutIfNeeded];
     }
 }
 
