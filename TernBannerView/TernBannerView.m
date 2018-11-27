@@ -306,6 +306,8 @@ static const NSInteger kTernCellHeight = 100;
                                                        selector:@selector(autoScroll:)
                                                        userInfo:nil
                                                         repeats:YES];
+    
+    [[NSRunLoop currentRunLoop] addTimer:self.bannersTimer forMode:NSRunLoopCommonModes];
 }
 
 - (void)stopTimer {
