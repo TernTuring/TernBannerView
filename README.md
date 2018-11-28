@@ -1,4 +1,7 @@
 # TernBannerView
+## Example
+
+![](./bannerview.gif)
 
 ## Requirements
 
@@ -13,11 +16,18 @@ Use [CocoaPods](https://cocoapods.org) with Podfile:
 pod 'TernBannerView'
 ```
 
+## Features
+
+- [x] self-customized the banner Height
+- [x] Infinite loop scrolling view
+- [x] Support Autolayout
+- [x] Supports whether PageController is displayed
+
 ## Usage
 
 1) Init View:
 
-``` objective-c
+``` Objective-c
 TernBannerView *banner = [[TernBannerView alloc] init:TernBannerDataImage];
 banner.delegate = self;
 banner.dataSource = self;
@@ -35,7 +45,7 @@ NSDictionary *constraintsView = NSDictionaryOfVariableBindings(banner);
 
 2) Implement   `TernBannerViewDelegate`  delegate in your class: 
 
-``` objective-c
+``` Objective-c
 - (void)bannerView:(TernBannerView *)bannerView didSelectItemAtIndex:(NSInteger)index {
 
 }
@@ -43,7 +53,7 @@ NSDictionary *constraintsView = NSDictionaryOfVariableBindings(banner);
 
 3) Implement `TernBannerViewDataSource`  datasource in your class: 
 
-``` objective-c
+``` Objective-c
 - (NSInteger)numberItemsOfBanner:(TernBannerView *)bannerView {
     return 4;
 }
