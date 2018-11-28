@@ -1,7 +1,7 @@
 # TernBannerView
 ## Example
 
-![](./bannerview.gif)
+<img src="https://github.com/TernTuring/TernBannerView/blob/master/bannerview.gif" width="450" hegiht="300" />
 
 ## Requirements
 
