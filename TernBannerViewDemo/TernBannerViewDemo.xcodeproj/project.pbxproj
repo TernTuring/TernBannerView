@@ -22,6 +22,7 @@
 		FC25624F2182E08100615817 /* temp@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC25624D2182E08100615817 /* temp@3x.png */; };
 		FC2562522182E23A00615817 /* banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC2562502182E23A00615817 /* banner@2x.png */; };
 		FC2562532182E23A00615817 /* banner@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC2562512182E23A00615817 /* banner@3x.png */; };
+		FCA4459921AD7F3B001E3404 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FCA4459821AD7F3A001E3404 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		FC25624D2182E08100615817 /* temp@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "temp@3x.png"; sourceTree = "<group>"; };
 		FC2562502182E23A00615817 /* banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner@2x.png"; sourceTree = "<group>"; };
 		FC2562512182E23A00615817 /* banner@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner@3x.png"; sourceTree = "<group>"; };
+		FCA4459821AD7F3A001E3404 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				FC2562432182DAF800615817 /* BannerItemViewCell.m */,
 				FC2562482182DAF800615817 /* PageControlerView.h */,
 				FC2562452182DAF800615817 /* PageControlerView.m */,
+				FCA4459821AD7F3A001E3404 /* README.md */,
 			);
 			name = TernBannerView;
 			path = ../TernBannerView;
@@ -277,6 +280,7 @@
 				FC2562532182E23A00615817 /* banner@3x.png in Resources */,
 				FC25621A2182DADF00615817 /* Assets.xcassets in Resources */,
 				FC25624E2182E08100615817 /* temp@2x.png in Resources */,
+				FCA4459921AD7F3B001E3404 /* README.md in Resources */,
 				FC2562182182DAD300615817 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

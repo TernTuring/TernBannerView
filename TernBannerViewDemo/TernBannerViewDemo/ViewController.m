@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    TernBannerView *banner = [[TernBannerView alloc] init:0];
+    TernBannerView *banner = [[TernBannerView alloc] init:TernBannerDataImage];
     banner.delegate = self;
     banner.dataSource = self;
     banner.showPageController = YES;
