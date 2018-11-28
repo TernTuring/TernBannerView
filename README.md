@@ -13,8 +13,6 @@ Use [CocoaPods](https://cocoapods.org) with Podfile:
 pod 'TernBannerView'
 ```
 
-Then import the module in your code:
-
 ## Usage
 
 1) Init View:
@@ -57,6 +55,6 @@ NSDictionary *constraintsView = NSDictionaryOfVariableBindings(banner);
 
 ## Licence
 
-CardSlider is released under the MIT license.
+TernBannerView is released under the MIT license.
 See [LICENSE](./LICENSE) for details.
 
